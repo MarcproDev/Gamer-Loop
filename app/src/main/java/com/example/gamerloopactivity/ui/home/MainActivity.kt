@@ -3,9 +3,6 @@ package com.example.gamerloopactivity.ui.home
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.gamerloopactivity.R
 import com.example.gamerloopactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
