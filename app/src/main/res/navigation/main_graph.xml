@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/contentScreenFragment">
+
+    <fragment
+        android:id="@+id/contentScreenFragment"
+        android:name="com.example.gamerloopactivity.ui.contentscreen.ContentScreenFragment"
+        android:label="fragment_contentscreen"
+        tools:layout="@layout/fragment_contentscreen" />
+    <fragment
+        android:id="@+id/infoScreenFragment"
+        android:name="com.example.gamerloopactivity.ui.infoscreen.InfoScreenFragment"
+        android:label="fragment_info_screen"
+        tools:layout="@layout/fragment_info_screen" />
+    <fragment
+        android:id="@+id/settingsScreenFragment"
+        android:name="com.example.gamerloopactivity.ui.settingsscreen.SettingsScreenFragment"
+        android:label="fragment_settings_screen"
+        tools:layout="@layout/fragment_settings_screen" />
+</navigation>

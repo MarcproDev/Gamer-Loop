@@ -7,10 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/activityContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph = "@navigation/main_graph"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavhost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
