@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/contentScreenFragment"
+        android:title="@string/content_screen"
+        android:icon="@drawable/ic_content"/>
+
+    <item
+        android:id="@+id/infoScreenFragment"
+        android:title="@string/info_screen"
+        android:icon="@drawable/ic_info"/>
+
+    <item
+        android:id="@+id/settingsScreenFragment"
+        android:title="@string/settings_screen"
+        android:icon="@drawable/ic_settings"/>
+</menu>

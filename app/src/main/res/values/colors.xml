@@ -6,13 +6,14 @@
     <color name="light_blue_900">#FF01579B</color>
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 
 <!--APP COLORS-->
     <color name="primary_light">#FFF6AD</color>
-    <color name="primary_dark">#FFFFFFFF</color>
+    <color name="primary_dark">#A2C8A031</color>
     <color name="secondary_light">#273155</color>
     <color name="secondary_dark">#01101D</color>
-    <color name="assent">#DE9100</color>
+    <color name="assent">#8BB5AA</color>
     <color name="secondary_assent">#680000</color>
     <color name="red">#EB0606</color>
 
