@@ -7,15 +7,6 @@
     android:theme="@style/ThemeOverlay.GamerLoopActivity.FullscreenContainer"
     tools:context=".ui.settingsscreen.SettingsScreenFragment">
 
-    <TextView
-        android:id="@+id/fullscreen_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textSize="50sp"
-        android:textStyle="bold" />
 
 
 </FrameLayout>

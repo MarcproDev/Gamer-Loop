@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.gamerloopactivity.databinding.FragmentInfoScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class InfoScreenFragment : Fragment() {
 
     private var _binding: FragmentInfoScreenBinding? = null

@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.gamerloopactivity.databinding.FragmentSettingsScreenBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SettingsScreenFragment : Fragment() {
 
     private var _binding: FragmentSettingsScreenBinding? = null

@@ -4,4 +4,11 @@
         <item name="android:background">@color/black_overlay</item>
         <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
     </style>
+
+    <style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/indie_flower_variable_ttf</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+
 </resources>

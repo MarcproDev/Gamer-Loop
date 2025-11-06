@@ -8,9 +8,10 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.gamerloopactivity.R
 import com.example.gamerloopactivity.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
@@ -28,7 +29,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun intNavigation() {
-        val navHost = supportFragmentManager.findFragmentById(R.id.activityContainerView) as NavHostFragment
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.activityContainerView) as NavHostFragment
         navController = navHost.navController
         binding.bottomNavView.setupWithNavController(navController)
 

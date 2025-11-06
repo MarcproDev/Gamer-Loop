@@ -1,11 +1,15 @@
 <resources>
-    <string name="app_name">GamerLoop</string>
+    <string name="app_name">Gamer Loop</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-<!--    nombres buttom_bar-->
+    <!--    nombres buttom_bar-->
     <string name="content_screen">game content</string>
     <string name="info_screen">info game</string>
     <string name="settings_screen">settings game</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_host">Find your game here</string>
+    <string name="host_sub_title">Here you can find all free games on the updated market</string>
+    <string name="host_title">your free game</string>
 </resources>

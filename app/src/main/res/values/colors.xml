@@ -10,8 +10,8 @@
 
 <!--APP COLORS-->
     <color name="primary_light">#FFF6AD</color>
-    <color name="primary_dark">#A2C8A031</color>
-    <color name="secondary_light">#273155</color>
+    <color name="primary_dark">#C8A031</color>
+    <color name="secondary_light">#6F273155</color>
     <color name="secondary_dark">#01101D</color>
     <color name="assent">#8BB5AA</color>
     <color name="secondary_assent">#680000</color>

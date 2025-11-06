@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/contentScreenFragment"
-        android:title="@string/content_screen"
-        android:icon="@drawable/ic_content"/>
+        android:icon="@drawable/ic_content"
+        android:title="@string/content_screen" />
 
     <item
         android:id="@+id/infoScreenFragment"
-        android:title="@string/info_screen"
-        android:icon="@drawable/ic_info"/>
+        android:icon="@drawable/ic_info"
+        android:title="@string/info_screen" />
 
     <item
         android:id="@+id/settingsScreenFragment"
-        android:title="@string/settings_screen"
-        android:icon="@drawable/ic_settings"/>
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings_screen" />
 </menu>
