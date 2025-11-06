@@ -5,17 +5,17 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/hostScreenFragment">
     <fragment
-        android:id="@+id/contentScreenFragment2"
+        android:id="@+id/contentScreenFragment"
         android:name="com.example.gamerloopactivity.ui.contentscreen.ContentScreenFragment"
         android:label="fragment_contentscreen"
         tools:layout="@layout/fragment_contentscreen" />
     <fragment
-        android:id="@+id/infoScreenFragment2"
+        android:id="@+id/infoScreenFragment"
         android:name="com.example.gamerloopactivity.ui.infoscreen.InfoScreenFragment"
         android:label="fragment_info_screen"
         tools:layout="@layout/fragment_info_screen" />
     <fragment
-        android:id="@+id/settingsScreenFragment2"
+        android:id="@+id/settingsScreenFragment"
         android:name="com.example.gamerloopactivity.ui.settingsscreen.SettingsScreenFragment"
         android:label="fragment_settings_screen"
         tools:layout="@layout/fragment_settings_screen" />
@@ -30,7 +30,7 @@
         android:label="fragment_host_screen"
         tools:layout="@layout/fragment_host_screen" >
         <action
-            android:id="@+id/action_hostScreenFragment_to_contentScreenFragment2"
-            app:destination="@id/contentScreenFragment2" />
+            android:id="@+id/action_hostScreenFragment_to_contentScreenFragment"
+            app:destination="@id/contentScreenFragment" />
     </fragment>
 </navigation>

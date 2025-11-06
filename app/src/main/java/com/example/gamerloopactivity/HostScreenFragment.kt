@@ -23,7 +23,7 @@ class HostScreenFragment : Fragment() {
 
         val navigateButton: Button = view.findViewById(R.id.btnToSearchView)
         navigateButton.setOnClickListener {
-            findNavController().navigate(R.id.action_hostScreenFragment_to_contentScreenFragment2)
+            findNavController().navigate(R.id.action_hostScreenFragment_to_contentScreenFragment)
         }
     }
 

@@ -11,7 +11,7 @@
         android:id="@+id/tvContentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:textColor="@color/black_overlay"
         android:fontFamily="@font/orbitron_variable"
         android:text="@string/host_title"
@@ -24,7 +24,7 @@
         android:id="@+id/frameLayoutImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvContentTitle">
@@ -41,7 +41,7 @@
         android:id="@+id/tvContentDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/orbitron_variable"
         android:gravity="center"
         android:text="@string/host_sub_title"
@@ -55,14 +55,14 @@
         android:id="@+id/btnToSearchView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="@color/secondary_light"
         android:text="@string/button_host"
         android:textSize="18sp"
         android:fontFamily="@font/orbitron_variable"
         android:textStyle="bold"
         android:textColor="@color/primary_light"
-        app:layout_constraintTop_toBottomOf="@+id/tvContentDescription" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

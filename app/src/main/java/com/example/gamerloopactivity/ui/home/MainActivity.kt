@@ -1,6 +1,7 @@
 package com.example.gamerloopactivity.ui.home
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -33,6 +34,22 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.activityContainerView) as NavHostFragment
         navController = navHost.navController
         binding.bottomNavView.setupWithNavController(navController)
+        setupBottomNavVisibility()
 
+    }
+
+    private fun setupBottomNavVisibility() {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            val destinationsWithBottomNav = setOf(
+                R.id.contentScreenFragment,
+                R.id.infoScreenFragment,
+                R.id.settingsScreenFragment
+            )
+            if (destinationsWithBottomNav.contains(destination.id)) {
+                binding.bottomNavView.visibility = View.VISIBLE
+            } else {
+                binding.bottomNavView.visibility = View.GONE
+            }
+        }
     }
 }
