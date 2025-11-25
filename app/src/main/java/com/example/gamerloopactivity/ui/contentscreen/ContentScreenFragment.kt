@@ -9,6 +9,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gamerloopactivity.databinding.FragmentContentscreenBinding
 import com.example.gamerloopactivity.ui.contentscreen.adapter.ContentScreenAdapter
@@ -46,11 +47,35 @@ class ContentScreenFragment : Fragment() {
 
     private fun setupRecyclerView() {
 
-        contentScreenAdapter = ContentScreenAdapter()
-
+        contentScreenAdapter = ContentScreenAdapter { gameId ->
+            navigateToInfoScreen(gameId)
+        }
         binding.recyclerViewGames.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = contentScreenAdapter
+        }
+    }
+
+    private fun navigateToInfoScreen(gameId: String) {
+        val intGameId = gameId.toIntOrNull()
+
+        if (intGameId == null) {
+            Log.e(TAG, "Error: El gameId recibido ('$gameId') no es un número válido.")
+            return
+        }
+        val gamesList = viewModel.contentInfo.value
+        val selectedGame = gamesList.find { it.id == intGameId }
+
+        if (selectedGame != null) {
+            val finalGameId = selectedGame.id ?: 0
+            val action = ContentScreenFragmentDirections.actionGlobalToInfoScreenFragment(
+                gameId = finalGameId)
+            findNavController().navigate(action)
+        } else {
+            Log.e(
+                TAG,
+                "Error de navegación: No se encontró el juego con ID $gameId en la lista actual."
+            )
         }
     }
 

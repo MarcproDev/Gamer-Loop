@@ -11,4 +11,24 @@
         <item name="android:textColor">@color/primary_light</item>
     </style>
 
+    <style name="TexDescription" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/rye_regular_value</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/secondary_assent</item>
+    </style>
+    <style name="TextInfoGame" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/rye_regular_value</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/primary_light</item>
+    </style>
+    <style name="TitleInfoGame" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/ewert_regular_value</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primary_light</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 </resources>

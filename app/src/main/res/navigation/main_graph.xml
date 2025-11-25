@@ -5,15 +5,27 @@
     android:id="@+id/main_graph"
     app:startDestination="@id/hostScreenFragment">
     <fragment
-        android:id="@+id/contentScreenFragment"
-        android:name="com.example.gamerloopactivity.ui.contentscreen.ContentScreenFragment"
-        android:label="fragment_contentscreen"
-        tools:layout="@layout/fragment_contentscreen" />
-    <fragment
         android:id="@+id/infoScreenFragment"
         android:name="com.example.gamerloopactivity.ui.infoscreen.InfoScreenFragment"
         android:label="fragment_info_screen"
-        tools:layout="@layout/fragment_info_screen" />
+        tools:layout="@layout/fragment_info_screen">
+        <argument
+            android:name="gameId"
+            app:argType="integer"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/contentScreenFragment"
+        android:name="com.example.gamerloopactivity.ui.contentscreen.ContentScreenFragment"
+        android:label="fragment_contentscreen"
+        tools:layout="@layout/fragment_contentscreen">
+        <action
+            android:id="@+id/action_contentScreenFragment_to_infoScreenFragment"
+            app:destination="@id/infoScreenFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_contentScreenFragment_to_infoScreenFragment"
+        app:destination="@id/infoScreenFragment" />
     <fragment
         android:id="@+id/settingsScreenFragment"
         android:name="com.example.gamerloopactivity.ui.settingsscreen.SettingsScreenFragment"
@@ -24,13 +36,19 @@
         android:name="com.example.gamerloopactivity.GamerLoopActivity"
         android:label="activity_gamer_loop"
         tools:layout="@layout/activity_gamer_loop" />
+
     <fragment
         android:id="@+id/hostScreenFragment"
         android:name="com.example.gamerloopactivity.HostScreenFragment"
         android:label="fragment_host_screen"
-        tools:layout="@layout/fragment_host_screen" >
+        tools:layout="@layout/fragment_host_screen">
         <action
             android:id="@+id/action_hostScreenFragment_to_contentScreenFragment"
             app:destination="@id/contentScreenFragment" />
     </fragment>
+
+    <action
+        android:id="@+id/action_global_to_infoScreenFragment"
+        app:destination="@id/infoScreenFragment" />
+
 </navigation>

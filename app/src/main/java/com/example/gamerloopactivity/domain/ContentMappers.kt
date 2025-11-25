@@ -3,25 +3,19 @@ package com.example.gamerloopactivity.domain
 import com.example.gamerloopactivity.data.model.ContentScreenDataResponse
 
 data class ContentInfo(
-    val id: Any,
+    val id: Int?,
     val title: String,
     val shortDescription: String,
-    val thumbnail: String,
-    val gameUrl: String,
-    val platform: String,
-    val publisher: String
+    val thumbnail: String
 )
 
 object ContentMappers {
     fun ContentScreenDataResponse.toContentInfo(): ContentInfo {
         return ContentInfo(
-            id = this.id ?: "",
+            id = this.id,
             title = this.title ?: "",
-            shortDescription = this.shortDescription ?: "Descripción no disponible",
+            shortDescription = this.shortDescription ?: "",
             thumbnail = this.thumbnail ?: "",
-            gameUrl = this.gameUrl ?: "",
-            platform = this.platform ?: "",
-            publisher = this.publisher ?: ""
         )
     }
 }

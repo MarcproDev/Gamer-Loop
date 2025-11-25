@@ -6,6 +6,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -49,6 +50,7 @@ android {
 }
 
 dependencies {
+    val navVersion = "2.7.5"
 
     //DaggerHilt
     implementation(libs.hilt.android)
@@ -62,6 +64,9 @@ dependencies {
 
 
     //NavComponent
+    // O la versión que estés usando
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
