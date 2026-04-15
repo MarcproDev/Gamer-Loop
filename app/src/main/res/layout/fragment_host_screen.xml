@@ -4,65 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_light"
     tools:context=".HostScreenFragment">
+
+    <FrameLayout
+        android:id="@+id/frameLayoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/host_background" />
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tvContentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:textColor="@color/black_overlay"
+        android:background="#717171"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/orbitron_variable"
         android:text="@string/host_title"
-        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:textColor="@color/assent"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <FrameLayout
-        android:id="@+id/frameLayoutImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvContentTitle">
-
-        <ImageView
-            android:id="@+id/ivContent"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_gamer2" />
-    </FrameLayout>
 
     <TextView
         android:id="@+id/tvContentDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/orbitron_variable"
         android:gravity="center"
+        android:textAllCaps="true"
+        android:background="#717171"
+        android:layout_margin="20dp"
         android:text="@string/host_sub_title"
         android:textSize="18sp"
-        android:textColor="@color/black_overlay"
+        android:textColor="@color/assent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayoutImage" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/btnToSearchView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginBottom="70dp"
         android:backgroundTint="@color/secondary_light"
         android:text="@string/button_host"
         android:textSize="18sp"
+        android:layout_margin="8dp"
         android:fontFamily="@font/orbitron_variable"
         android:textStyle="bold"
-        android:textColor="@color/primary_light"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textColor="@color/assent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContentTitle"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

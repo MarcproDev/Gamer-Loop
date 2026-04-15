@@ -10,14 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.gamerloopactivity.R
 import com.example.gamerloopactivity.databinding.FragmentInfoScreenBinding
+import com.example.gamerloopactivity.domain.InfoMappers
 import com.example.gamerloopactivity.ui.infoscreen.ui.InfoUiState
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
-import androidx.navigation.fragment.findNavController
-import com.example.gamerloopactivity.domain.InfoMappers
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
@@ -53,6 +53,15 @@ class InfoScreenFragment : Fragment(R.layout.fragment_info_screen) {
         }
         collectUiState()
         collectNavigationEvents()
+        setUpListener(gameId)
+    }
+
+    private fun setUpListener(gameId: Int) {
+        binding.settingsButton.setOnClickListener {
+            Log.d(TAG, "Navegando a la pantalla de Settings para el ID: $gameId")
+            val action = InfoScreenFragmentDirections.actionInfoScreenFragmentToSettingsScreenFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun collectUiState() {
@@ -116,6 +125,8 @@ class InfoScreenFragment : Fragment(R.layout.fragment_info_screen) {
 
             Picasso.get()
                 .load(gameDetails.image)
+                .fit() // Ajusta la imagen al tamaño del ImageView
+                .centerCrop() // Centra y recorta para llenar el espacio
                 .placeholder(android.R.drawable.progress_indeterminate_horizontal)
                 .error(android.R.drawable.stat_notify_error)
                 .into(imageViewInfo)

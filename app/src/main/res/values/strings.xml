@@ -12,4 +12,7 @@
     <string name="button_host">Find your game here</string>
     <string name="host_sub_title">Here you can find all free games on the updated market</string>
     <string name="host_title">your free game</string>
+    <string name="settings_text_button">tap to see SETTINGS</string>
+    <string name="settings_title">System Requirements</string>
+
 </resources>

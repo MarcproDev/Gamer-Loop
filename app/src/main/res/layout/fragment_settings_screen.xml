@@ -1,12 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_light"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/ThemeOverlay.GamerLoopActivity.FullscreenContainer"
     tools:context=".ui.settingsscreen.SettingsScreenFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainBackground"
+        android:layout_width="0dp"
+        android:layout_height="655dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/settings_background_boy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/frameSettingsTitle"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/orbitron_variable"
+            android:text="@string/settings_title"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_pc"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/frameSettingsTitle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iconPcSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pc_icon" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvGameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rye_regular_value"
+        android:textAllCaps="true"
+        android:textColor="@color/assent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameSettingsTitle"
+        tools:text="Call Of Duty : warzone" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGameTitle">
+
+        <TextView
+            android:id="@+id/tvPlatform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Platform: Windows" />
+
+        <TextView
+            android:id="@+id/tvPublisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Publisher: Activision" />
+
+        <TextView
+            android:id="@+id/tvMinimumSystem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="M.S.requirements:Windows 7 64-Bit (SP1) or Windows 10 64-Bit" />
+
+        <TextView
+            android:id="@+id/tvProcessor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Processor: Intel Core i3-4340 or AMD FX-6300" />
+
+        <TextView
+            android:id="@+id/tvMemory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Memory: 8GB RAM" />
+
+        <TextView
+            android:id="@+id/tvGraphics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Graphics: NVIDIA GeForce GTX 670 / GeForce GTX 1650 or Radeon HD 7950" />
+
+        <TextView
+            android:id="@+id/tvStorage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/assent"
+            android:textSize="16sp"
+            tools:ignore="MissingConstraints"
+            tools:text="Storage: 175GB HD space" />
+
+    </LinearLayout>
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.gamerloopactivity.data.core
+ package com.example.gamerloopactivity.data.core
 
 import okhttp3.Interceptor
 import okhttp3.Response

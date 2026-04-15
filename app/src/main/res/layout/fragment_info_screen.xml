@@ -22,7 +22,6 @@
         android:id="@+id/textViewInfoTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
         style="@style/TitleInfoGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,12 +106,28 @@
             tools:src="@mipmap/ic_icon_violeta" />
     </androidx.cardview.widget.CardView>
 
+   <Button
+       android:id="@+id/settingsButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:fontFamily="@font/rye_regular_value"
+       android:layout_marginStart="20dp"
+       android:layout_marginEnd="20dp"
+       android:textColor="@color/primary_light"
+       android:backgroundTint="@color/secondary_assent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:text="@string/settings_text_button"
+       app:layout_constraintTop_toBottomOf="@id/cardViewInfoImage"
+       app:layout_constraintBottom_toTopOf="@id/CardViewDescription"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/CardViewDescription"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="46dp"
         android:layout_marginBottom="80dp"
         android:layout_marginEnd="10dp"
         android:backgroundTint="@color/primary_light"

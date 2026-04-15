@@ -1,7 +1,6 @@
 package com.example.gamerloopactivity.network
 
 import com.example.gamerloopactivity.data.GameRepository
-import com.example.gamerloopactivity.data.core.AuthInterceptor
 import com.example.gamerloopactivity.domain.RetrofitService
 import dagger.Module
 import dagger.Provides

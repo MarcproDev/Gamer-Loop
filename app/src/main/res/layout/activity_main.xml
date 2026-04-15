@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="@color/primary_light"
+            android:textColor="@color/assent"
             android:textStyle="bold"
             android:fontFamily="@font/orbitron_variable"
             android:textSize="30sp"
